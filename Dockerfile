@@ -12,4 +12,4 @@ COPY --chown=node:node ./ ./
 RUN npm run build
 
 FROM nginx
-COPY --from=builder home/node/app/build /usr/share/nginx/html
+COPY --from=builder home/node/app/build /usr/share/nginx/htmlchown -R user:user .git/
